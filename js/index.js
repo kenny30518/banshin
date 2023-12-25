@@ -1,12 +1,14 @@
-$(document).ready(function(){
-    $('.slick-slide').slick({
-        dots: true,
+$(function() {
+    $('.banner-slider').slick({
+        autoplay: true,
+        autoplaySpeed: 9000,
+        dots: false,
         infinite: true,
-        speed: 500,
+        speed: 600,
         fade: true,
-        cssEase: 'linear'
-      });
-  });
+        cssEase: 'ease-in-out'
+    });
+});
 
 /* header scroll show and hide */
 $(window).scroll(function() {

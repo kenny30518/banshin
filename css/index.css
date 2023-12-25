@@ -170,6 +170,7 @@ header .headerWrap .quickLink a i {
 }
 
 .bannerArea {
+    background-color: black;
     position: relative;
 }
 
@@ -199,8 +200,15 @@ header .headerWrap .quickLink a i {
     top: 50%;
     left: 50%;
     z-index: 2;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-30%);
     justify-content: center;
+    transition: 2s 1s;
+    opacity: 0;
+}
+
+.bannerBox .slick-active .bannerText {
+    opacity: 1;
+    transform: translate(-50%,-50%);
 }
 
 .bannerBox img {
@@ -208,6 +216,15 @@ header .headerWrap .quickLink a i {
     position: relative;
     max-width: 100%;
     max-height: 100%;
+}
+
+.bannerBox .bannerImage {
+    transform: scale(1.1);
+    transition: 3s;
+}
+
+.slick-active .bannerImage {
+    transform: scale(1);
 }
 
 .scrollIcon {
