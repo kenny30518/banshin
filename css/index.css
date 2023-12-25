@@ -78,7 +78,10 @@ body {
 }
 
 .bannerBox img {
+    display: block;
     position: relative;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .scrollIcon {
@@ -138,6 +141,7 @@ body {
 }
 
 .intro {
+    z-index: 20;
     position: relative;
     background: url(../image/homebg.jpg) repeat-y top left;
     display: flex;
@@ -220,6 +224,7 @@ body {
 }
 
 .news .newsRight {
+    position: relative;
     width: 810px;
 }
 
@@ -232,18 +237,27 @@ body {
 }
 
 .news .newsRight .newsList::after {
-    content: ">";
+    content: "\f105";
+    font-family: FontAwesome;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 17px;
     color: #313131;
+    background-color: transparent;
     border: 1px solid #313131;
     border-radius: 100%;
     width: 23px;
     height: 23px;
     position: absolute;
     right: 0;
+    transition: 0.6s;
+}
+
+.news .newsRight .newsList:hover::after {
+    background-color: #CAAC63;
+    color: white;
+    border: 1px solid transparent;
 }
 
 .news .newsRight .newsList .date {
@@ -282,4 +296,154 @@ body {
 
 .news .newsRight .newsList h3 a:hover {
     color: #CAAC63;
+}
+
+.news .newsRight .more {
+    position: absolute;
+    right: 0;
+    text-align: left;
+}
+
+.news .newsRight .more a {
+    width: 180px;
+    display: inline-block;
+    padding: 10px 0 20px;
+    text-decoration: none;
+    color: #2d2d2d;
+    transition: 0.6s;
+}
+
+.news .newsRight .more a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    border-top: 1px solid #7d7d7d;
+    border-bottom: 1px solid #7d7d7d;
+    transition: 0.6s;
+}
+
+.news .newsRight .more:hover a {
+    color: #CAAC63;
+}
+
+.news .newsRight .more:hover a::after{
+    border-top: 1px solid #CAAC63 ;
+    border-bottom: 1px solid #CAAC63;
+}
+
+.lowerBanner {
+    position: relative;
+}
+
+.lowerBanner .lowerLogo {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+
+.lowerBanner .lowerImage {
+    display: block;
+}
+
+.lowerBanner .lowerImage img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+footer {
+    padding: 40px 60px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .media {
+    display: flex;
+    align-items: center;
+}
+
+footer .media a {
+    width: 37px;
+    height: 37px;
+    color: #0f0f0f;
+    border: 1px solid #0f0f0f;
+    border-radius: 100%;
+    margin: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.6s;
+}
+
+footer .media a:hover {
+    color: #CAAC63;
+    border: 1px solid #CAAC63;
+}
+
+footer .copyright {
+    font-family: "Noto Serif JP", "Noto Serif TC", serif;
+    color: #626262;
+    font-size: 13px;
+    padding-top: 10px;
+    line-height: 2;
+}
+
+footer .right .link {
+    display: flex;
+    align-items: baseline;
+}
+
+footer .right .link a::before {
+    content: "/";
+    font-size: 16px;
+    display: inline-flex;
+    justify-content: center;
+    color: #bebebd;
+    width: 30px;
+}
+
+footer .right .link li:first-child a::before {
+    display: none;
+}
+
+footer .right .link li {
+    list-style: none;
+}
+
+footer .right .link li a {
+    text-decoration: none;
+    font-size: 15px;
+    color: #111;
+}
+
+footer address {
+    font-family: "Noto Serif JP", "Noto Serif TC", serif;
+    font-style: normal;
+    line-height: 2;
+    font-size: 14px;
+    padding-top: 20px;
+}
+
+footer address li {
+    list-style: none;
+    display: flex;
+    flex-direction: row-reverse;
+    letter-spacing: 1px;
+}
+
+footer address li i {
+    font-style: normal;
+    margin-left: 10px;
+    color: #626262;
+}
+
+footer address a {
+    text-decoration: none;
+    color: #111;
 }
