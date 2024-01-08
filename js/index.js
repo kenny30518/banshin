@@ -1,4 +1,15 @@
-$(function() {
+$(window).on('load', function() {
+    setTimeout(function() {
+        $('#firstSlideImage').css('transform','scale(1)');
+    }, 300);
+
+    setTimeout(function() {
+        $('#firstSlideText').css('opacity','1');
+        $('#firstSlideText').css('transform','translate(-50%,-50%)');
+    }, 300);
+
+    $('.mainMask').addClass("hide");
+    $('#firstSlideImage').animate({ opacity: 1 }, 600);
     $('.banner-slider').slick({
         autoplay: true,
         autoplaySpeed: 9000,
