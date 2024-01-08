@@ -256,6 +256,7 @@ header .headerWrap .quickLink a i {
     right: 70px;
     bottom: 0;
     padding-bottom: 105px;
+    cursor: pointer;
 }
 
 .scrollIcon::before {

@@ -24,6 +24,12 @@ $(window).on('load', function() {
         $('#firstSlideImage').removeAttr("style");
         $('#firstSlideText').removeAttr("style");
     }, 3000);
+
+    $(".scrollIcon").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#intro").offset().top-150
+        }, 900);
+    });
 });
 
 /* header scroll show and hide */
