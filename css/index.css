@@ -241,10 +241,7 @@ header .headerWrap .quickLink a i {
 }
 
 .slick-active .bannerImage {
-    transform: scale(1);
-}
-
-.bannerImage.active {
+    opacity: 1;
     transform: scale(1);
 }
 

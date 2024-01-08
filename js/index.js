@@ -19,6 +19,11 @@ $(window).on('load', function() {
         fade: true,
         cssEase: 'ease-in-out'
     });
+
+    setTimeout(function() {
+        $('#firstSlideImage').removeAttr("style");
+        $('#firstSlideText').removeAttr("style");
+    }, 3000);
 });
 
 /* header scroll show and hide */
