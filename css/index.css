@@ -78,6 +78,16 @@ header .headerWrap .menuWrap ul li a {
     font-size: 16px;
 }
 
+@media (max-width:1280px) {
+    header .headerWrap {
+        padding: 0 20px;
+    }
+
+    header .headerWrap .menuWrap ul li a {
+        padding: 10px;
+    }
+}
+
 header .headerWrap .menuWrap ul li a::after {
     content: "";
     width: 0px;
@@ -330,6 +340,7 @@ header .headerWrap .quickLink a i {
     opacity: 0;
     transform: translate(40px,0);
     transition: 0.9s 0.6s;
+    min-width: 450px;
 }
 
 .intro .rightSection.show {
@@ -373,6 +384,12 @@ header .headerWrap .quickLink a i {
     transform: rotate(45deg);
 }
 
+@media (max-width:1280px) {
+    .title {
+        writing-mode: horizontal-tb;
+    }
+}
+
 .intro .rightSection article {
     padding: 50px 0;
     line-height: 2;
@@ -381,7 +398,7 @@ header .headerWrap .quickLink a i {
 }
 
 .news {
-    position: relative;
+    position: relativ e;
     padding: 110px 0;
     transform: translate(0,30px);
     opacity: 0;
