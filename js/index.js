@@ -17,7 +17,8 @@ $(window).on('load', function() {
         infinite: true,
         speed: 600,
         fade: true,
-        cssEase: 'ease-in-out'
+        cssEase: 'ease-in-out',
+        arrow: false
     });
 
     setTimeout(function() {
@@ -39,6 +40,14 @@ $(window).scroll(function() {
     } else {
         $('header').removeClass("show");
     }
+});
+
+/*mobile menu animation toggle*/
+$(window).on('load', function() {
+    $('.hamburger').click(function() {
+        $('.hamburger').toggleClass("active");
+        $('.mobileMenu').toggleClass("show");
+    });
 });
 
 /* shopping button change color on scroll */
