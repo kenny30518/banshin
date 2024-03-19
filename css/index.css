@@ -26,6 +26,13 @@ body {
     overflow: hidden;
 }
 
+@media (max-width: 1180px) {
+    .mainWrap {
+        padding-top: 60px;
+        padding-bottom: 55px;
+    }
+}
+
 header {
     width: 100%;
     position: fixed;
@@ -384,6 +391,12 @@ header .headerWrap .quickLink a i {
     z-index: 2;
 }
 
+@media (max-width: 1180px) {
+    .bannerlogo {
+        display: none;
+    }
+}
+
 .bannerlogo img { 
     display: block;
 }
@@ -443,6 +456,12 @@ header .headerWrap .quickLink a i {
     bottom: 0;
     padding-bottom: 105px;
     cursor: pointer;
+}
+
+@media (max-width: 1180px) {
+    .scrollIcon {
+        display: none;
+    }
 }
 
 .scrollIcon::before {
@@ -809,6 +828,13 @@ footer {
     opacity: 0;
 }
 
+@media (max-width: 1280px) {
+    footer {
+        padding: 40px 20px;
+        display: block;
+    }
+}
+
 footer.show {
     opacity: 1;
     transform: translate(0,0);
@@ -846,9 +872,21 @@ footer .copyright {
     line-height: 2;
 }
 
+@media (max-width: 1280px) {
+    footer .right {
+        padding-top: 20px;
+    }
+}
+
 footer .right .link {
     display: flex;
     align-items: baseline;
+}
+
+@media (max-width: 1280px) {
+    footer .right .link {
+        flex-wrap: wrap;
+    }
 }
 
 footer .right .link a::before {
@@ -889,10 +927,23 @@ footer address li {
     letter-spacing: 1px;
 }
 
+@media (max-width: 1280px) {
+    footer address li {
+        flex-direction: row;
+    }
+}
+
 footer address li i {
     font-style: normal;
     margin-left: 10px;
     color: #626262;
+}
+
+@media (max-width: 1280px) {
+    footer address li i {
+        margin-left: 0px;
+        margin-right: 10px;
+    }
 }
 
 footer address a {
